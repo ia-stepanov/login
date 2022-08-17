@@ -10,51 +10,247 @@
     <div class="login-page-wrapp d-flex">
       <div class="login-form-wrap d-flex align-items-center">
         <div class="form-card card ml-auto">
-          <div class="card-body">
-            <h4 class="card-title">Please Login</h4>
-            <form name="loginForm">
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  data-required="email"
-                  data-invalid-message="Please provide valid email example@example.com"
-                />
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Password"
-                  data-required="password"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+          <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="nav-home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-home"
+                type="button"
+                role="tab"
+                aria-controls="nav-home"
+                aria-selected="true"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="nav-profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-profile"
+                type="button"
+                role="tab"
+                aria-controls="nav-profile"
+                aria-selected="false"
+                >Signup</a
+              >
+            </li>
+          </ul>
+
+          <div class="tab-content" id="nav-tabContent">
+            <div
+              class="card-body tab-pane fade show active"
+              id="nav-home"
+              role="tabpanel"
+              aria-labelledby="nav-home-tab"
+            >
+              <h4 class="card-title">Please Login</h4>
+              <form class="login-form" name="loginForm">
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                    data-required="email"
+                    data-invalid-message="Please provide valid email example@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                    data-required="password"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+
+            <div
+              class="card-body tab-pane fade"
+              id="nav-profile"
+              role="tabpanel"
+              aria-labelledby="nav-profile-tab"
+            >
+              <h4 class="card-title">Create Account</h4>
+              <form class="signup-form" name="signupForm">
+                <div class="form-group">
+                  <label for="signupNickname">Nickname</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="signup-nickname"
+                    aria-describedby="nicknameHelp"
+                    placeholder="Enter nickname"
+                    data-required="nickname"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="signup-email"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                    data-required="email"
+                    data-invalid-message="Please provide valid email example@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="signup-password"
+                    placeholder="Enter password"
+                    data-required="password"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="signupFirstName">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="signup-firstname"
+                    aria-describedby="firstnameHelp"
+                    placeholder="Enter first name"
+                    data-required="firstname"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="signupLastName">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="signup-lastname"
+                    aria-describedby="lastnameHelp"
+                    placeholder="Enter a last name"
+                    data-required="lastname"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="signupPhone">Phone number</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="signup-phone"
+                        aria-describedby="phoneHelp"
+                        placeholder="Enter a phone number"
+                        data-required="phone"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="signupLastname">Date of birth</label>
+                      <input
+                        type="date"
+                        class="form-control calendar"
+                        id="signup-birth"
+                        name="birthday"
+                        placeholder="Enter lastname"
+                        data-required="birth"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="sighupCountry">Country</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="signup-country"
+                        aria-describedby="countryHelp"
+                        placeholder="Country"
+                        data-required="country"
+                      />
+                      <ul class="list-group list-group-country"></ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="sighupCity">City</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="signup-city"
+                        aria-describedby="cityHelp"
+                        placeholder="City"
+                        data-required="city"
+                        disabled
+                      />
+                      <ul class="list-group list-group-city"></ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input
+                      class="custom-control-input"
+                      type="radio"
+                      name="gender_orientation"
+                      id="signin-gender_orientation-m"
+                      value="male"
+                      checked
+                    />
+                    <label class="custom-control-label" for="signin-gender_orientation-m">
+                      Male
+                    </label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input
+                      class="custom-control-input"
+                      type="radio"
+                      name="gender_orientation"
+                      id="signin-gender_orientation-f"
+                      value="female"
+                    />
+                    <label class="custom-control-label" for="signin-gender_orientation-f">
+                      Female
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
       <!-- /.login-form-wrap -->
-      
+
       <div class="login-greeting-screen d-flex align-items-center">
         <div class="login-greeting-screen-text">
           <h1 class="login-greeting-screen-title">Welcome to my app</h1>
           <p class="login-greeting-screen-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            inventore non accusantium earum, illo dolores reprehenderit laborum
-            ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
-            ipsa exercitationem eaque totam. A.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores inventore
+            non accusantium earum, illo dolores reprehenderit laborum ratione quos
+            doloribus repellat eligendi deleniti. Ipsum voluptate ipsa exercitationem
+            eaque totam. A.
           </p>
         </div>
       </div>
       <!-- /.login-greeting-screen -->
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <!-- /.login-page-wrapp -->
   </body>
 </html>

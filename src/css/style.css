@@ -38,3 +38,10 @@
 .login-greeting-screen .login-greeting-screen-description {
   line-height: 1.4;
 }
+
+.signup-form {
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 10px;
+}
